@@ -1,0 +1,32 @@
+import { FETCH_REVIEWS_FAILURE, FETCH_REVIEWS_REQUEST,
+  FETCH_REVIEWS_SUCCESS, FETCH_REVIEW_FAILURE, FETCH_REVIEW_REQUEST,
+  FETCH_REVIEW_SUCCESS, FETCH_EDIT_REVIEW_FAILURE,
+  FETCH_EDIT_REVIEW_REQUEST, FETCH_EDIT_REVIEW_SUCCESS,
+  FETCH_DELETE_REVIEW_FAILURE, FETCH_DELETE_REVIEW_REQUEST,
+  FETCH_DELETE_REVIEW_SUCCESS
+} from '../actions/reviews'
+import { CLEAR_ERROR_MESSAGE } from '../actions/errorMessage'
+
+const errorMessage = (state = null, action) => {
+  switch (action.type) {
+    case FETCH_REVIEWS_FAILURE :
+    case FETCH_REVIEW_FAILURE :
+    case FETCH_EDIT_REVIEW_FAILURE :
+    case FETCH_DELETE_REVIEW_FAILURE :
+      return action.message
+    case FETCH_REVIEWS_REQUEST :
+    case FETCH_REVIEWS_SUCCESS :
+    case FETCH_REVIEW_REQUEST :
+    case FETCH_REVIEW_SUCCESS :
+    case CLEAR_ERROR_MESSAGE :
+    case FETCH_EDIT_REVIEW_REQUEST :
+    case FETCH_EDIT_REVIEW_SUCCESS :
+    case FETCH_DELETE_REVIEW_REQUEST :
+    case FETCH_DELETE_REVIEW_SUCCESS :
+      return null
+    default :
+      return state
+  }
+}
+
+export default errorMessage

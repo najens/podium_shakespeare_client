@@ -3,3 +3,179 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.flex-1 {
+  flex: 1;
+}
+
+/* ReviewStats Component */
+.stat-star-size {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+.stat-review-size {
+  font-size: 1.3rem;
+}
+.stat-bar-height {
+  height: 50px;
+}
+
+/* ReviewBar Component */
+.bar-background {
+  flex: 12;
+  background: #eee;
+}
+.bar-style {
+  background: #1565c0;
+  height: 30px;
+}
+
+/* Ratings */
+.rating-colored {
+  color: #1565c0;
+}
+.rating-uncolored {
+  color: #eeeeee;
+}
+
+/* UserReview Component */
+.review-heading {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.review-prompt {
+  font-size: 1.3rem;
+  padding: 10px;
+}
+.user-rating {
+  font-size: 3rem;
+  color: #eee;
+}
+.user-rating a {
+  cursor: pointer;
+}
+
+/* Review Component */
+.review-author {
+  font-size: 1.1rem;
+}
+.review-date {
+  font-size: 0.9rem;
+}
+.review-star-size {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+.ellipsis-size {
+  font-size: 1.3rem;
+}
+
+/* ReviewForm Component */
+.form-star-size {
+  font-size: 2rem;
+  color: #eee;
+}
+
+
+/* Loading Spinner */
+/* Loading Spinner */
+.loader {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 24px;
+  height: 24px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn-fixed,
+.loading-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loadingContainer {
+  z-index: 10;
+}
+
+.loading-btn-container {
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+/* Modal */
+/* The Modal (background) */
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.modal a {
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+.modal a:hover {
+  border: 1px solid #eee;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-button {
+  font-size: 1.7rem;
+  color: #000;
+}
